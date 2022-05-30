@@ -1,0 +1,33 @@
+#GuidLine to install youtube video installer
+
+*Install Python
+*Install firefix and configure it with your username
+
+
+open in the project directory and run command
+
+*Create virtual env
+	python -m venv venv
+	venv\script\activate
+
+*Install requirements file
+	open in the project directory and run command "pip install -r requirements.txt"
+
+add path in file "\venv\Lib\site-packages\selenium_firefox\firefox.py" in line # 25 and 26 just replace the paths according to your machine
+
+
+
+profile = webdriver.FirefoxProfile(r'C:/Users/username/AppData/Roaming/Mozilla/Firefox/Profiles/profilename')
+self.driver = webdriver.Firefox(
+firefox_profile="C:/Users/username/AppData/Roaming/Mozilla/Firefox/Profiles/profilename",
+executable_path="path-to-your-project/geckodriver.exe")
+
+
+now run the code with command:
+
+
+python upload.py --video 'path of video' --meta meta.jsons
+
+
+
+ 
